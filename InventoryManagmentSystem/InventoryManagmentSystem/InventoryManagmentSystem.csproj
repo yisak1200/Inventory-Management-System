@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61734E45-6214-4A63-946E-18EB4D003267}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InventoryManagmentSystem</RootNamespace>
+    <AssemblyName>InventoryManagmentSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.3, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.3\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Case1_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Case1_user.Designer.cs">
+      <DependentUpon>Case1_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control.cs" />
+    <Compile Include="Dataset.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeePage.Designer.cs">
+      <DependentUpon>EmployeePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Request.Designer.cs">
+      <DependentUpon>Employee_Request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emp_withdrwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emp_withdrwal.Designer.cs">
+      <DependentUpon>Emp_withdrwal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function.cs" />
+    <Compile Include="Given_Asset_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Given_Asset_Report.Designer.cs">
+      <DependentUpon>Given_Asset_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\AcceptedReq.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\AcceptedReq.Designer.cs">
+      <DependentUpon>AcceptedReq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\AddDepartment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\AddDepartment.Designer.cs">
+      <DependentUpon>AddDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\AddDepartmentHead.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\AddDepartmentHead.Designer.cs">
+      <DependentUpon>AddDepartmentHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\AddEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\AddItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\AddSubAdminn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\AddSubAdminn.Designer.cs">
+      <DependentUpon>AddSubAdminn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\AddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\AssetForCase1_user.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\AssetForCase1_user.Designer.cs">
+      <DependentUpon>AssetForCase1_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\Asset_detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\Asset_detail.Designer.cs">
+      <DependentUpon>Asset_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\ChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\ChangePasswordEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\ChangePasswordEmployee.Designer.cs">
+      <DependentUpon>ChangePasswordEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\ChangePass_For_case1User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\ChangePass_For_case1User.Designer.cs">
+      <DependentUpon>ChangePass_For_case1User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\ChangePass_INV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\ChangePass_INV.Designer.cs">
+      <DependentUpon>ChangePass_INV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\DepEmpReq.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\DepEmpReq.Designer.cs">
+      <DependentUpon>DepEmpReq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\Given_Asset.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\Given_Asset.Designer.cs">
+      <DependentUpon>Given_Asset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvManagment\withdwal_asset.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvManagment\withdwal_asset.Designer.cs">
+      <DependentUpon>withdwal_asset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notfication_for_emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notfication_for_emp.Designer.cs">
+      <DependentUpon>Notfication_for_emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Store_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store_Report.Designer.cs">
+      <DependentUpon>Store_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subAdmin.Designer.cs">
+      <DependentUpon>subAdmin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Case1_user.resx">
+      <DependentUpon>Case1_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeePage.resx">
+      <DependentUpon>EmployeePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Request.resx">
+      <DependentUpon>Employee_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emp_withdrwal.resx">
+      <DependentUpon>Emp_withdrwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GivenAsset.rdlc" />
+    <EmbeddedResource Include="Given_Asset_Report.resx">
+      <DependentUpon>Given_Asset_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\AcceptedReq.resx">
+      <DependentUpon>AcceptedReq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\AddDepartment.resx">
+      <DependentUpon>AddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\AddDepartmentHead.resx">
+      <DependentUpon>AddDepartmentHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\AddSubAdminn.resx">
+      <DependentUpon>AddSubAdminn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\AssetForCase1_user.resx">
+      <DependentUpon>AssetForCase1_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\Asset_detail.resx">
+      <DependentUpon>Asset_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\ChangePasswordEmployee.resx">
+      <DependentUpon>ChangePasswordEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\ChangePass_For_case1User.resx">
+      <DependentUpon>ChangePass_For_case1User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\ChangePass_INV.resx">
+      <DependentUpon>ChangePass_INV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\DepEmpReq.resx">
+      <DependentUpon>DepEmpReq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\Given_Asset.resx">
+      <DependentUpon>Given_Asset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvManagment\withdwal_asset.resx">
+      <DependentUpon>withdwal_asset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notfication_for_emp.resx">
+      <DependentUpon>Notfication_for_emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="StoreReport.rdlc" />
+    <EmbeddedResource Include="Store_Report.resx">
+      <DependentUpon>Store_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subAdmin.resx">
+      <DependentUpon>subAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
